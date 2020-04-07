@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Producto
+from .models import User, Warframes
 
 class UserSerializer(serializers.Serializer):
     id = serializers.ReadOnlyField(required=False)
@@ -18,7 +18,7 @@ class UserSerializer(serializers.Serializer):
 
         return instance
 
-class ProductosSerializer(serializers.ModelSerializer):
+class WarframesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Producto
+        model = Warframes
         fields = '__all__'

@@ -1,12 +1,12 @@
 from rest_framework import viewsets
-from Login_CRUD.models import Producto
+from Login_CRUD.models import Warframes
 from rest_framework.permissions import IsAuthenticated
-from Login_CRUD.serializer import ProductosSerializer
+from Login_CRUD.serializer import WarframesSerializer
 
-class ProductosViewSet(viewsets.ModelViewSet):
+class WarfrmesViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
-    queryset = Producto.objects.all()
-    serializer_class = ProductosSerializer
+    queryset = Warframes.objects.all()
+    serializer_class = WarframesSerializer
 
 #class DetallesViewSet(viewsets.ModelViewSet):
 #    permission_classes = [IsAuthenticated]
